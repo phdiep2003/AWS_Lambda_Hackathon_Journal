@@ -1,4 +1,4 @@
-# Empathy Journal – AI-Powered Mental Health Reflection ✨
+# Empathy Journal – AI-Powered Mental Health Reflection
 
 Empathy Journal is a secure, serverless journaling web app that helps users explore their emotions through AI-generated insights and behavioral trends. Built for the **AWS Lambda Hackathon 2024**, this project combines mental wellness with cutting-edge cloud tech.
 
