@@ -1,6 +1,6 @@
-# Empathy Journal – AI-Powered Mental Health Reflection ✨
+# Empathy Journal – AI-Powered Mental Health Reflection
 
-Empathy Journal is a secure, serverless journaling web app that helps users explore their emotions through AI-generated insights and behavioral trends. Built for the **AWS Lambda Hackathon 2024**, this project combines mental wellness with cutting-edge cloud tech.
+Empathy Journal is a secure, serverless journaling web app that helps users explore their emotions through AI-generated insights and behavioral trends. Built for the **AWS Lambda Hackathon 2025**, this project combines mental wellness with cutting-edge cloud tech.
 
 ---
 
@@ -54,3 +54,18 @@ Empathy Journal is a secure, serverless journaling web app that helps users expl
 git clone https://github.com/your-username/empathy-journal-lambda.git
 cd empathy-journal-lambda
 ```
+
+2. Install frontend dependencies:
+
+```
+npm install
+npm run dev
+```
+
+3. Create a .env file:
+
+```
+VITE_LAMBDA_URL=https://your-api-gateway-url
+```
+
+4. Start journaling and analyzing your thoughts
