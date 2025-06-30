@@ -9,10 +9,10 @@ Empathy Journal is a secure, serverless journaling web app that helps users expl
 
 ### How We Used AWS Lambda
 
-The app uses AWS Lambda to handle GPT-powered journal analysis. When a user submits their journal entry and clicks **"Analyze with AI"**, the frontend sends a POST request to an API Gateway endpoint, which triggers a Lambda function. This Lambda function:
+The app uses AWS Lambda to handle Gemini-Powered journal analysis. When a user submits their journal entry and clicks **"Analyze with AI"**, the frontend sends a POST request to an API Gateway endpoint, which triggers a Lambda function. This Lambda function:
 
 1. Receives the journal entry
-2. Sends the text to OpenAI's GPT API
+2. Sends the text to Google's Gemini API
 3. Formats the response (emotion, themes, summary, prompts)
 4. Sends the result back to the frontend for display and storage
 
@@ -22,7 +22,7 @@ The app uses AWS Lambda to handle GPT-powered journal analysis. When a user subm
 
 | Service        | Purpose |
 |----------------|---------|
-| AWS Lambda     | Serverless backend to run GPT logic |
+| AWS Lambda     | Serverless backend to run Gemini logic |
 | API Gateway    | Expose Lambda as RESTful HTTP endpoint |
 | CloudWatch     | Monitor and debug Lambda invocations |
 | IAM Roles      | Permission control for Lambda execution |
@@ -35,7 +35,7 @@ The app uses AWS Lambda to handle GPT-powered journal analysis. When a user subm
   Write in peace with a clean, minimal editor interface.
 
 - **GPT-Powered Reflection**  
-  Each journal entry is analyzed by Gemini to detect:
+  Each journal entry is analyzed by Google's Gemini API to detect:
 
   - Emotional tone
   - Repeating themes
@@ -53,7 +53,7 @@ The app uses AWS Lambda to handle GPT-powered journal analysis. When a user subm
   - Optional offline data export (`.zip` format)
 
 - **Serverless Backend with AWS Lambda**
-  - GPT analysis handled via Lambda + API Gateway
+  - Gemini analysis handled via Lambda + API Gateway
   - Firebase Firestore for real-time journal storage
   - Zero backend server to manage
 
@@ -64,10 +64,8 @@ The app uses AWS Lambda to handle GPT-powered journal analysis. When a user subm
 | Category | Tech Stack                                      |
 | -------- | ----------------------------------------------- |
 | Cloud    | AWS Lambda, API Gateway, Firebase Hosting       |
-| AI       | OpenAI GPT-4o API                               |
+| AI       | Google's Gemini 1.5 Flash API                   |
 | Frontend | React, Vite, Tailwind CSS                       |
-| Charts   | Chart.js (for mood/emotion trends)              |
-| Security | AES encryption (Web Crypto API), JWT (optional) |
 
 ---
 
@@ -100,7 +98,7 @@ VITE_LAMBDA_URL=https://your-api-gateway-url
 ## Challenges & Learnings
 
 - Configuring CORS correctly between Lambda and the frontend
-- Making GPT responses consistent + parseable
+- Making Gemini responses consistent + parseable
 - Styling responsive UI with Tailwind CSS
 - Handling async + loading states while calling AI
 
