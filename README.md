@@ -69,3 +69,23 @@ VITE_LAMBDA_URL=https://your-api-gateway-url
 ```
 
 4. Start journaling and analyzing your thoughts
+
+---
+
+## Challenges & Learnings
+
+- Configuring CORS correctly between Lambda and frontend
+- Making GPT responses consistent + parseable
+- Styling responsive UI with Tailwind CSS
+- Handling async + loading states while calling AI
+
+
+---
+
+## Future Plans
+
+- Weekly emotion summaries
+- Mood trend charts with Chart.js
+- Offline-first mode (PWA)
+- Export to PDF or Markdown
+- AI-generated gratitude prompts
