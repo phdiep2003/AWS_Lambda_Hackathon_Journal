@@ -7,13 +7,35 @@ Empathy Journal is a secure, serverless journaling web app that helps users expl
 
 ---
 
+### How We Used AWS Lambda
+
+The app uses AWS Lambda to handle GPT-powered journal analysis. When a user submits their journal entry and clicks **"Analyze with AI"**, the frontend sends a POST request to an API Gateway endpoint, which triggers a Lambda function. This Lambda function:
+
+1. Receives the journal entry
+2. Sends the text to OpenAI's GPT API
+3. Formats the response (emotion, themes, summary, prompts)
+4. Sends the result back to the frontend for display and storage
+
+---
+
+## AWS Services Used
+
+| Service        | Purpose |
+|----------------|---------|
+| AWS Lambda     | Serverless backend to run GPT logic |
+| API Gateway    | Expose Lambda as RESTful HTTP endpoint |
+| CloudWatch     | Monitor and debug Lambda invocations |
+| IAM Roles      | Permission control for Lambda execution |
+
+---
+
 ## Key Features
 
 - **Distraction-Free Journaling**  
   Write in peace with a clean, minimal editor interface.
 
 - **GPT-Powered Reflection**  
-  Each journal entry is analyzed by OpenAI’s GPT to detect:
+  Each journal entry is analyzed by Gemini to detect:
 
   - Emotional tone
   - Repeating themes
@@ -77,7 +99,7 @@ VITE_LAMBDA_URL=https://your-api-gateway-url
 
 ## Challenges & Learnings
 
-- Configuring CORS correctly between Lambda and frontend
+- Configuring CORS correctly between Lambda and the frontend
 - Making GPT responses consistent + parseable
 - Styling responsive UI with Tailwind CSS
 - Handling async + loading states while calling AI
