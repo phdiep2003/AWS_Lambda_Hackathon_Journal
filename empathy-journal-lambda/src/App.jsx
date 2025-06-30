@@ -9,7 +9,7 @@ import JournalList from './JournalList';
 
 const Header = () => (
   <header className="w-full bg-white shadow-md p-4 flex justify-between items-center rounded-b-xl">
-    <h1 className="text-3xl font-extrabold text-indigo-700">Empathy Journal</h1>
+    <h1 className="text-3xl font-extrabold !text-indigo-700">Empathy Journal</h1>
   </header>
 );
 
@@ -77,7 +77,6 @@ function App() {
             value={journal}
             onChange={(e) => setJournal(e.target.value)}
           />
-
           <div className="flex justify-end space-x-4">
             <button
               onClick={saveJournal}
